@@ -1,0 +1,111 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: lightgray; 
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.balance {
+    font-size: 22px;
+    margin: 20px 0;
+    color: darkblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;
+    color: darkblue;
+}
+
+input[type="number"], input[type="text"], input[type="password"], select {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 2px solid darkblue;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: lightgray; 
+}
+
+input[type="number"]:focus, input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    border-color: blue;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.4);
+}
+
+button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: blue;
+    transform: translateY(-3px);
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: gray;
+    color: #333;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: darkgray;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

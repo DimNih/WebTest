@@ -1,0 +1,253 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e7f2fe;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 190px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#menu-toggle:checked + .dropdown {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease forwards;
+}
+
+.dropdown a {
+    padding: 12px 20px;
+    color: #3b82f6;
+    text-decoration: none;
+    transition: background-color 0.3s, padding 0.3s;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+.dropdown a:hover {
+    background-color: #cce4ff;
+    padding-left: 25px;
+}
+
+#menu-toggle:checked + .dropdown:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+nav a {
+    background-color: #fdfdfd;
+    color: black;
+    padding: 15px 30px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+nav a img {
+    margin-right: 8px;
+    width: 24px;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+nav a:hover img {
+    opacity: 1;
+}
+
+.bekgrond {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3b82f6;
+    margin: 40px 0;
+    animation: fadeInDown 1.5s ease-in-out;
+    text-align: center;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+.fakta {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.fakta h2 {
+    font-size: 32px;
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+
+.fakta p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: #3b82f6;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .menu-btn {
+        top: 10px;
+        right: 10px;
+    }
+
+    .dropdown {
+        top: 60px;
+        right: 10px;
+    }
+}

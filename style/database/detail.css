@@ -1,0 +1,77 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.container {
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.product-name {
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 10px 0;
+}
+img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 3px solid blue;
+    border-radius: 12px;
+    margin: 10px 0;
+    object-fit: contain;
+}
+.info {
+    font-size: 18px;
+    color: black;
+    margin: 8px 0;
+}
+.info strong {
+    color: blue;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.nav-button {
+    padding: 8px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 10%;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+}
+.nav-button:hover {
+    background-color: darkgreen;
+    transform: translateY(-2px);
+}
+.info-message {
+    color: red;
+    font-size: 16px;
+    margin: 0 10px;
+}
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
